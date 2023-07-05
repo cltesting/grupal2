@@ -29,4 +29,34 @@
     <servlet-name>Login</servlet-name>
     <url-pattern>/Login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Usuario</display-name>
+    <servlet-name>Usuario</servlet-name>
+    <servlet-class>cl.grupo1.servlet.Usuario</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Usuario</servlet-name>
+    <url-pattern>/Usuario</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserLogin</display-name>
+    <servlet-name>UserLogin</servlet-name>
+    <servlet-class>cl.grupo1.servlet.UserLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLogin</servlet-name>
+    <url-pattern>/UserLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Login_Usuario</display-name>
+    <servlet-name>Login_Usuario</servlet-name>
+    <servlet-class>Login_Usuario</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login_Usuario</servlet-name>
+    <url-pattern>/Login_Usuario</url-pattern>
+  </servlet-mapping>
 </web-app>

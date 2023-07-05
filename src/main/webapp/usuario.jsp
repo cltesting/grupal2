@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistema de Control de Asesorías</title>
+  <title>Panel de control Usuarios</title>
   
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -20,10 +20,16 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.jsp">Home</a>
+          <a class="nav-link" aria-current="page" href="usuario.jsp">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="crear_capacitacion.jsp">Crear Capacitacion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.jsp">Contacto</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="login_user.jsp">Login</a>
+          <a class="nav-link" href="index.jsp">Cerrar Sesion</a>
         </li>
       </ul>
       <span class="navbar-text">

@@ -31,7 +31,7 @@
 </nav>
 	<div class="container col-lg-8 mt-4">
 		<h1>Registro de Capacitaciones</h1>
-		<form action="CrearCapacitacion" method="post">
+		<form action="resumen_capacitacion.jsp" method="post">
 			<div class="form-group">
 				<label for="nombre">Rut Cliente:</label> 
 				<input type="text" class="form-control" id="rut" name="rut" required>
