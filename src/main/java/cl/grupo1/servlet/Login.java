@@ -53,7 +53,7 @@ public class Login extends HttpServlet {
 		}
 		else 
 		{
-			out.println("Usuario o Contraseña incorrectos, favor vuelva a intentar")
+			out.println("Usuario o Contraseña incorrectos, favor vuelva a intentar");
 			RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
 			rd.include(request, response);
 		}
