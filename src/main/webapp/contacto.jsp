@@ -7,6 +7,14 @@
 <title>Contacto</title>
 <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+<%
+    session=request.getSession(false);
+    if(session.getAttribute("admin")==null)
+    {
+        response.sendRedirect("index.jsp");
+    }
+
+%> 
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
   <div class="container-fluid">
@@ -64,4 +72,5 @@
 		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
 		crossorigin="anonymous"></script>
 </body>
+<% out.print("Session id:" + session.getId()); %>
 </html>

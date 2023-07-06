@@ -42,5 +42,6 @@ public class Contacto extends HttpServlet {
 		request.setAttribute("mensaje", mensaje);
 		request.getRequestDispatcher("resumen_mensaje.jsp").forward(request, response);
 	}
-
+	
+	
 }

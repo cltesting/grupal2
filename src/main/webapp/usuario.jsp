@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,6 +12,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
+<%
+    session=request.getSession(false);
+    if(session.getAttribute("admin")==null)
+    {
+        response.sendRedirect("index.jsp");
+    }
+
+%> 
 <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Menu</a>
@@ -29,7 +38,7 @@
           <a class="nav-link" href="contacto.jsp">Contacto</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="index.jsp">Cerrar Sesion</a>
+          <a class="nav-link" href="cerrar_sesion.jsp">Cerrar Sesion</a>
         </li>
       </ul>
       <span class="navbar-text">
@@ -47,4 +56,5 @@
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
+<% out.print("Session id:" + session.getId()); %>
 </html>

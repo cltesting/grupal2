@@ -7,7 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<% session.invalidate(); %> <!-- HERE WE ARE INVALIDATE THE SESSION, SO THAT NO VALUES WILL BE PRESENT IN SESSION -->
-	<jsp:forward page="index.jsp"/>
+	<%
+out.print("Ha cerrado sesion correctamente!");
+HttpSession sess=request.getSession(true);
+session.invalidate();  
+response.sendRedirect("index.jsp");
+%>
 </body>
 </html>

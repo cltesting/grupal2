@@ -1,9 +1,19 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>	
 <html>
 <head>
 <title>Registro de Empleado</title>
 <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+<%
+    session=request.getSession(false);
+    if(session.getAttribute("admin")==null)
+    {
+        response.sendRedirect("index.jsp");
+    }
+
+%> 
 <body>
 	<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
   <div class="container-fluid">
@@ -21,6 +31,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contacto.jsp">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cerrar_sesion.jsp">Cerrar Sesion</a>
         </li>
       </ul>
       <span class="navbar-text">
@@ -72,4 +85,5 @@
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+<% out.print("Session id:" + session.getId()); %>
 </html>
