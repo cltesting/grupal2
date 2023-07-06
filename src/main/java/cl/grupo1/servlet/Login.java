@@ -71,16 +71,27 @@ public class Login extends HttpServlet {
         // Validate the password - If password is correct, 
         // set the user in this session
         // and redirect to welcome page
-        if (password.equals("1234")) {
-            session.setAttribute("admin", user);
-            response.sendRedirect("usuario.jsp?name=" + user);
-        }
-        // If the password is wrong, display the error message on the login page.
-        else {
+        if (user.equals("admin")) {
+            
+            if (password.equals("1234")) {
+                session.setAttribute("admin", user);
+                response.sendRedirect("usuario.jsp?name=" + user);
+
+            }
+            // If the password is wrong, display the error message on the login page.
+            else {
             RequestDispatcher rd = request.getRequestDispatcher("login_user.jsp");
             out.println("<font color=red>Contraseña incorrecta, intenta nuevamente</font>");
-            rd.include(request, response);
-        }
+            rd.include(request, response);  
+            }
+            
+            }
+            
+            else {
+                RequestDispatcher rd = request.getRequestDispatcher("login_user.jsp");
+                out.println("<font color=red>Usuario incorrecto, intenta nuevamente</font>");
+                rd.include(request, response);
+            }
         // Close the print writer object.
         out.close();
     }
